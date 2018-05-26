@@ -1,3 +1,16 @@
-PODFILE CHECKSUM: 327359763a2da88ac37e0ba1562c2d952830c9b0
+PODS:
+  - EasyDi (1.4.0)
+
+DEPENDENCIES:
+  - EasyDi
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - EasyDi
+
+SPEC CHECKSUMS:
+  EasyDi: 84cfe04e906c0f463b1b1d76ed4be3db446f9702
+
+PODFILE CHECKSUM: 7c39acba0ed37922b24ef9d02e6c6a06aefb3f53
 
 COCOAPODS: 1.5.2

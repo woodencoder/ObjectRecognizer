@@ -6,6 +6,6 @@ target 'ObjectRecognizer' do
   use_frameworks!
 
   # Dependencies management
-  pod 'EasyDi
+  pod 'EasyDi'
 
 end
