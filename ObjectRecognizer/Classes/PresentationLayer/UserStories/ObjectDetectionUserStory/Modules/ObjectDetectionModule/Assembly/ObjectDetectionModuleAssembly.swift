@@ -16,16 +16,27 @@ class ObjectDetectionModuleAssembly: Assembly {
     }
     
     var presenter: ObjectDetectionPresenter {
-        return define(scope: .prototype,
-                      init: ObjectDetectionPresenterImpl(
+        return define(
+            scope: .prototype,
+            init: ObjectDetectionPresenterImpl(
                         view: self.view)
         )
     }
     
+    var mediaAccessor: MediaAccessor {
+        return define(
+            scope: .prototype,
+            init: MediaAccessorImpl()
+        )
+    }
+    
     func inject(into viewController: ObjectDetectionViewController) {
-        return defineInjection(key: "view", into: viewController) {
-            $0.presenter = self.presenter
-            return $0
+        defineInjection(
+            key: "view",
+            into: viewController) {
+                $0.presenter = self.presenter
+                $0.mediaAccessor = self.mediaAccessor
+                return $0
         }
     }
     

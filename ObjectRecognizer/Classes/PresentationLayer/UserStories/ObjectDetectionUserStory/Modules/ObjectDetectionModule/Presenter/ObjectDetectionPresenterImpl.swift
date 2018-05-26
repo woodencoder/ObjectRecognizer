@@ -24,4 +24,9 @@ extension ObjectDetectionPresenterImpl: ObjectDetectionPresenter {
         
     }
     
+    func didObtainClassificationData(_ data: ClassificationData) {
+        
+    }
+    
+    
 }

@@ -10,4 +10,5 @@ import Foundation
 
 protocol ObjectDetectionPresenter {
     func viewIsReady()
+    func didObtainClassificationData(_ data: ClassificationData)
 }

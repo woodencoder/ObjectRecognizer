@@ -13,6 +13,7 @@ import UIKit
 class ObjectDetectionViewController: UIViewController {
     
     var presenter: ObjectDetectionPresenter!
+    var mediaAccessor: MediaAccessor!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,10 +23,28 @@ class ObjectDetectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewIsReady()
+        
+        mediaAccessor.delegate = self
     }
-
+    
+    @IBAction func didPressOpenCamera(_ sender: Any) {
+        mediaAccessor.openCamera(from: self)
+    }
+    
+    @IBAction func didPressOpenLibrary(_ sender: Any) {
+        mediaAccessor.openImageGallery(from: self)
+    }
+    
 }
 
 extension ObjectDetectionViewController: ObjectDetectionView {
+    
+}
+
+extension ObjectDetectionViewController: MediaAccessorDelegate {
+    
+    func mediaAccessor(_ mediaAccessor: MediaAccessor, didFinishPickingData data: ClassificationData) {
+        presenter.didObtainClassificationData(data)
+    }
     
 }
