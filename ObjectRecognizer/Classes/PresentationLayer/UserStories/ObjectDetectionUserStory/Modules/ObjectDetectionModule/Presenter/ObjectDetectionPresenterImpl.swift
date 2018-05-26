@@ -10,8 +10,18 @@ import Foundation
 
 class ObjectDetectionPresenterImpl {
     
+    private weak var view: ObjectDetectionView?
+    
+    init(view: ObjectDetectionView) {
+        self.view = view
+    }
+    
 }
 
 extension ObjectDetectionPresenterImpl: ObjectDetectionPresenter {
+    
+    func viewIsReady() {
+        
+    }
     
 }

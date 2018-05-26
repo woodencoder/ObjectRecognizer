@@ -13,6 +13,7 @@
 		043FA68420B96F810022B836 /* ObjectDetectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FA68320B96F810022B836 /* ObjectDetectionPresenter.swift */; };
 		043FA68620B96FA00022B836 /* ObjectDetectionPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FA68520B96FA00022B836 /* ObjectDetectionPresenterImpl.swift */; };
 		043FA68820B977470022B836 /* Cifar10.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 043FA68720B977470022B836 /* Cifar10.mlmodel */; };
+		043FA68E20B97D470022B836 /* ObjectDetectionModuleAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FA68D20B97D470022B836 /* ObjectDetectionModuleAssembly.swift */; };
 		0470B43A20B159A900254F67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470B43920B159A900254F67 /* AppDelegate.swift */; };
 		0470B44120B159B000254F67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0470B44020B159B000254F67 /* Assets.xcassets */; };
 		0470B44420B159B000254F67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0470B44220B159B000254F67 /* LaunchScreen.storyboard */; };
@@ -26,6 +27,7 @@
 		043FA68320B96F810022B836 /* ObjectDetectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetectionPresenter.swift; sourceTree = "<group>"; };
 		043FA68520B96FA00022B836 /* ObjectDetectionPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetectionPresenterImpl.swift; sourceTree = "<group>"; };
 		043FA68720B977470022B836 /* Cifar10.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Cifar10.mlmodel; sourceTree = "<group>"; };
+		043FA68D20B97D470022B836 /* ObjectDetectionModuleAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetectionModuleAssembly.swift; sourceTree = "<group>"; };
 		0470B43620B159A900254F67 /* ObjectRecognizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjectRecognizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0470B43920B159A900254F67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0470B44020B159B000254F67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,6 +88,9 @@
 		043FA67320B96D940022B836 /* BusinessLogicLayer */ = {
 			isa = PBXGroup;
 			children = (
+				043FA68920B97C7C0022B836 /* Assembly */,
+				043FA68A20B97C880022B836 /* Gateways */,
+				043FA68C20B97D0E0022B836 /* UseCases */,
 			);
 			path = BusinessLogicLayer;
 			sourceTree = "<group>";
@@ -136,6 +141,7 @@
 		043FA67C20B96EE10022B836 /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
+				043FA68D20B97D470022B836 /* ObjectDetectionModuleAssembly.swift */,
 			);
 			path = Assembly;
 			sourceTree = "<group>";
@@ -156,6 +162,27 @@
 				043FA68120B96F2A0022B836 /* ObjectDetectionView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		043FA68920B97C7C0022B836 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		043FA68A20B97C880022B836 /* Gateways */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Gateways;
+			sourceTree = "<group>";
+		};
+		043FA68C20B97D0E0022B836 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 		0470B42D20B159A900254F67 = {
@@ -215,6 +242,7 @@
 				0470B43220B159A900254F67 /* Sources */,
 				0470B43320B159A900254F67 /* Frameworks */,
 				0470B43420B159A900254F67 /* Resources */,
+				B9CA1461101BEE2FEA4DEF39 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -272,6 +300,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		B9CA1461101BEE2FEA4DEF39 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ObjectRecognizer/Pods-ObjectRecognizer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/EasyDi/EasyDi.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EasyDi.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ObjectRecognizer/Pods-ObjectRecognizer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C7E585E6DBBACA32013F69D7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -299,6 +345,7 @@
 			files = (
 				0470B43A20B159A900254F67 /* AppDelegate.swift in Sources */,
 				043FA68820B977470022B836 /* Cifar10.mlmodel in Sources */,
+				043FA68E20B97D470022B836 /* ObjectDetectionModuleAssembly.swift in Sources */,
 				043FA68620B96FA00022B836 /* ObjectDetectionPresenterImpl.swift in Sources */,
 				043FA68220B96F2A0022B836 /* ObjectDetectionView.swift in Sources */,
 				043FA68020B96F000022B836 /* ObjectDetectionViewController.swift in Sources */,
@@ -441,7 +488,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 663EN2VY39;
-				INFOPLIST_FILE = ObjectRecognizer/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ObjectRecognizer/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -460,7 +507,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 663EN2VY39;
-				INFOPLIST_FILE = ObjectRecognizer/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ObjectRecognizer/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
