@@ -16,6 +16,7 @@
 		0470B43A20B159A900254F67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470B43920B159A900254F67 /* AppDelegate.swift */; };
 		0470B44120B159B000254F67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0470B44020B159B000254F67 /* Assets.xcassets */; };
 		0470B44420B159B000254F67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0470B44220B159B000254F67 /* LaunchScreen.storyboard */; };
+		7EF30C0A2BA828A9B80DA27D /* Pods_ObjectRecognizer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 399479057D8FE4E17063A525 /* Pods_ObjectRecognizer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,9 @@
 		0470B44020B159B000254F67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0470B44320B159B000254F67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0470B44520B159B000254F67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		399479057D8FE4E17063A525 /* Pods_ObjectRecognizer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjectRecognizer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BA27E6BFD9270F0583E385E /* Pods-ObjectRecognizer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectRecognizer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ObjectRecognizer/Pods-ObjectRecognizer.debug.xcconfig"; sourceTree = "<group>"; };
+		D0E3DA419DCA137ACEDA1EC3 /* Pods-ObjectRecognizer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectRecognizer.release.xcconfig"; path = "Pods/Target Support Files/Pods-ObjectRecognizer/Pods-ObjectRecognizer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EF30C0A2BA828A9B80DA27D /* Pods_ObjectRecognizer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +163,8 @@
 			children = (
 				0470B43820B159A900254F67 /* ObjectRecognizer */,
 				0470B43720B159A900254F67 /* Products */,
+				F20E07CC364053F05283CCF7 /* Pods */,
+				FA60BC148122BD127AC7760D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -180,6 +187,23 @@
 			path = ObjectRecognizer;
 			sourceTree = "<group>";
 		};
+		F20E07CC364053F05283CCF7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4BA27E6BFD9270F0583E385E /* Pods-ObjectRecognizer.debug.xcconfig */,
+				D0E3DA419DCA137ACEDA1EC3 /* Pods-ObjectRecognizer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FA60BC148122BD127AC7760D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				399479057D8FE4E17063A525 /* Pods_ObjectRecognizer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -187,6 +211,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0470B44820B159B000254F67 /* Build configuration list for PBXNativeTarget "ObjectRecognizer" */;
 			buildPhases = (
+				C7E585E6DBBACA32013F69D7 /* [CP] Check Pods Manifest.lock */,
 				0470B43220B159A900254F67 /* Sources */,
 				0470B43320B159A900254F67 /* Frameworks */,
 				0470B43420B159A900254F67 /* Resources */,
@@ -245,6 +270,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C7E585E6DBBACA32013F69D7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ObjectRecognizer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0470B43220B159A900254F67 /* Sources */ = {
@@ -390,6 +436,7 @@
 		};
 		0470B44920B159B000254F67 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BA27E6BFD9270F0583E385E /* Pods-ObjectRecognizer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -408,6 +455,7 @@
 		};
 		0470B44A20B159B000254F67 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0E3DA419DCA137ACEDA1EC3 /* Pods-ObjectRecognizer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
