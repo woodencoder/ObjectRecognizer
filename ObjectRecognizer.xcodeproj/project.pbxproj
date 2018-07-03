@@ -7,38 +7,58 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0426CD5620B9A0D90063821A /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0426CD5520B9A0D90063821A /* MobileNet.mlmodel */; };
 		043FA67A20B96EBE0022B836 /* ObjectDetectionUserStory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043FA67920B96EBE0022B836 /* ObjectDetectionUserStory.storyboard */; };
 		043FA68020B96F000022B836 /* ObjectDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FA67F20B96F000022B836 /* ObjectDetectionViewController.swift */; };
 		043FA68220B96F2A0022B836 /* ObjectDetectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FA68120B96F2A0022B836 /* ObjectDetectionView.swift */; };
 		043FA68420B96F810022B836 /* ObjectDetectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FA68320B96F810022B836 /* ObjectDetectionPresenter.swift */; };
 		043FA68620B96FA00022B836 /* ObjectDetectionPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FA68520B96FA00022B836 /* ObjectDetectionPresenterImpl.swift */; };
-		043FA68820B977470022B836 /* Cifar10.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 043FA68720B977470022B836 /* Cifar10.mlmodel */; };
 		043FA68E20B97D470022B836 /* ObjectDetectionModuleAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FA68D20B97D470022B836 /* ObjectDetectionModuleAssembly.swift */; };
 		043FA69120B9874F0022B836 /* MediaAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FA69020B9874F0022B836 /* MediaAccessor.swift */; };
 		043FA69320B9881A0022B836 /* MediaAccessorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FA69220B9881A0022B836 /* MediaAccessorImpl.swift */; };
 		043FA69620B98CB30022B836 /* ClassificationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FA69520B98CB30022B836 /* ClassificationData.swift */; };
+		043FA69820B990CA0022B836 /* ImagesGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FA69720B990C90022B836 /* ImagesGateway.swift */; };
+		043FA69A20B992380022B836 /* ImagesGatewayImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FA69920B992380022B836 /* ImagesGatewayImpl.swift */; };
+		043FA69C20B993830022B836 /* ClassificationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FA69B20B993830022B836 /* ClassificationResult.swift */; };
+		043FA69E20B995B70022B836 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FA69D20B995B70022B836 /* Result.swift */; };
+		043FA6A020B997D00022B836 /* ClassifyDataUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FA69F20B997D00022B836 /* ClassifyDataUseCase.swift */; };
+		043FA6A220B998D30022B836 /* GatewaysAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FA6A120B998D30022B836 /* GatewaysAssembly.swift */; };
+		043FA6A420B999390022B836 /* UseCasesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FA6A320B999390022B836 /* UseCasesAssembly.swift */; };
+		043FA6A720B99AE50022B836 /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FA6A620B99AE50022B836 /* CGImagePropertyOrientation+UIImageOrientation.swift */; };
 		0470B43A20B159A900254F67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470B43920B159A900254F67 /* AppDelegate.swift */; };
 		0470B44120B159B000254F67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0470B44020B159B000254F67 /* Assets.xcassets */; };
 		0470B44420B159B000254F67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0470B44220B159B000254F67 /* LaunchScreen.storyboard */; };
+		04BF14DB20BB07E1006B4E97 /* Fruits360.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 04BF14DA20BB07E0006B4E97 /* Fruits360.mlmodel */; };
+		04BF14DD20BB08E0006B4E97 /* Cifar10.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 04BF14DC20BB08DF006B4E97 /* Cifar10.mlmodel */; };
 		7EF30C0A2BA828A9B80DA27D /* Pods_ObjectRecognizer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 399479057D8FE4E17063A525 /* Pods_ObjectRecognizer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0426CD5520B9A0D90063821A /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNet.mlmodel; sourceTree = "<group>"; };
 		043FA67920B96EBE0022B836 /* ObjectDetectionUserStory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ObjectDetectionUserStory.storyboard; sourceTree = "<group>"; };
 		043FA67F20B96F000022B836 /* ObjectDetectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetectionViewController.swift; sourceTree = "<group>"; };
 		043FA68120B96F2A0022B836 /* ObjectDetectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetectionView.swift; sourceTree = "<group>"; };
 		043FA68320B96F810022B836 /* ObjectDetectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetectionPresenter.swift; sourceTree = "<group>"; };
 		043FA68520B96FA00022B836 /* ObjectDetectionPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetectionPresenterImpl.swift; sourceTree = "<group>"; };
-		043FA68720B977470022B836 /* Cifar10.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Cifar10.mlmodel; sourceTree = "<group>"; };
 		043FA68D20B97D470022B836 /* ObjectDetectionModuleAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetectionModuleAssembly.swift; sourceTree = "<group>"; };
 		043FA69020B9874F0022B836 /* MediaAccessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaAccessor.swift; sourceTree = "<group>"; };
 		043FA69220B9881A0022B836 /* MediaAccessorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaAccessorImpl.swift; sourceTree = "<group>"; };
 		043FA69520B98CB30022B836 /* ClassificationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassificationData.swift; sourceTree = "<group>"; };
+		043FA69720B990C90022B836 /* ImagesGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesGateway.swift; sourceTree = "<group>"; };
+		043FA69920B992380022B836 /* ImagesGatewayImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesGatewayImpl.swift; sourceTree = "<group>"; };
+		043FA69B20B993830022B836 /* ClassificationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassificationResult.swift; sourceTree = "<group>"; };
+		043FA69D20B995B70022B836 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		043FA69F20B997D00022B836 /* ClassifyDataUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifyDataUseCase.swift; sourceTree = "<group>"; };
+		043FA6A120B998D30022B836 /* GatewaysAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatewaysAssembly.swift; sourceTree = "<group>"; };
+		043FA6A320B999390022B836 /* UseCasesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCasesAssembly.swift; sourceTree = "<group>"; };
+		043FA6A620B99AE50022B836 /* CGImagePropertyOrientation+UIImageOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGImagePropertyOrientation+UIImageOrientation.swift"; sourceTree = "<group>"; };
 		0470B43620B159A900254F67 /* ObjectRecognizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjectRecognizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0470B43920B159A900254F67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0470B44020B159B000254F67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0470B44320B159B000254F67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0470B44520B159B000254F67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04BF14DA20BB07E0006B4E97 /* Fruits360.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Fruits360.mlmodel; sourceTree = "<group>"; };
+		04BF14DC20BB08DF006B4E97 /* Cifar10.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Cifar10.mlmodel; sourceTree = "<group>"; };
 		399479057D8FE4E17063A525 /* Pods_ObjectRecognizer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjectRecognizer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BA27E6BFD9270F0583E385E /* Pods-ObjectRecognizer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectRecognizer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ObjectRecognizer/Pods-ObjectRecognizer.debug.xcconfig"; sourceTree = "<group>"; };
 		D0E3DA419DCA137ACEDA1EC3 /* Pods-ObjectRecognizer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectRecognizer.release.xcconfig"; path = "Pods/Target Support Files/Pods-ObjectRecognizer/Pods-ObjectRecognizer.release.xcconfig"; sourceTree = "<group>"; };
@@ -62,6 +82,7 @@
 				043FA67120B96D850022B836 /* ApplicationLayer */,
 				043FA67320B96D940022B836 /* BusinessLogicLayer */,
 				043FA67220B96D8A0022B836 /* PresentationLayer */,
+				043FA6A520B99ABB0022B836 /* Extensions */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -69,7 +90,9 @@
 		043FA67020B96AF50022B836 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				043FA68720B977470022B836 /* Cifar10.mlmodel */,
+				0426CD5520B9A0D90063821A /* MobileNet.mlmodel */,
+				04BF14DC20BB08DF006B4E97 /* Cifar10.mlmodel */,
+				04BF14DA20BB07E0006B4E97 /* Fruits360.mlmodel */,
 				0470B44020B159B000254F67 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -98,6 +121,7 @@
 				043FA68920B97C7C0022B836 /* Assembly */,
 				043FA68A20B97C880022B836 /* Gateways */,
 				043FA68C20B97D0E0022B836 /* UseCases */,
+				043FA69D20B995B70022B836 /* Result.swift */,
 			);
 			path = BusinessLogicLayer;
 			sourceTree = "<group>";
@@ -175,6 +199,8 @@
 		043FA68920B97C7C0022B836 /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
+				043FA6A120B998D30022B836 /* GatewaysAssembly.swift */,
+				043FA6A320B999390022B836 /* UseCasesAssembly.swift */,
 			);
 			path = Assembly;
 			sourceTree = "<group>";
@@ -182,6 +208,8 @@
 		043FA68A20B97C880022B836 /* Gateways */ = {
 			isa = PBXGroup;
 			children = (
+				043FA69720B990C90022B836 /* ImagesGateway.swift */,
+				043FA69920B992380022B836 /* ImagesGatewayImpl.swift */,
 			);
 			path = Gateways;
 			sourceTree = "<group>";
@@ -189,6 +217,7 @@
 		043FA68C20B97D0E0022B836 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				043FA69F20B997D00022B836 /* ClassifyDataUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -206,8 +235,17 @@
 			isa = PBXGroup;
 			children = (
 				043FA69520B98CB30022B836 /* ClassificationData.swift */,
+				043FA69B20B993830022B836 /* ClassificationResult.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		043FA6A520B99ABB0022B836 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				043FA6A620B99AE50022B836 /* CGImagePropertyOrientation+UIImageOrientation.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		0470B42D20B159A900254F67 = {
@@ -371,12 +409,22 @@
 				0470B43A20B159A900254F67 /* AppDelegate.swift in Sources */,
 				043FA69620B98CB30022B836 /* ClassificationData.swift in Sources */,
 				043FA69120B9874F0022B836 /* MediaAccessor.swift in Sources */,
-				043FA68820B977470022B836 /* Cifar10.mlmodel in Sources */,
+				043FA6A720B99AE50022B836 /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */,
+				043FA69E20B995B70022B836 /* Result.swift in Sources */,
+				043FA69A20B992380022B836 /* ImagesGatewayImpl.swift in Sources */,
+				04BF14DB20BB07E1006B4E97 /* Fruits360.mlmodel in Sources */,
+				043FA6A220B998D30022B836 /* GatewaysAssembly.swift in Sources */,
 				043FA69320B9881A0022B836 /* MediaAccessorImpl.swift in Sources */,
 				043FA68E20B97D470022B836 /* ObjectDetectionModuleAssembly.swift in Sources */,
 				043FA68620B96FA00022B836 /* ObjectDetectionPresenterImpl.swift in Sources */,
+				0426CD5620B9A0D90063821A /* MobileNet.mlmodel in Sources */,
+				043FA69820B990CA0022B836 /* ImagesGateway.swift in Sources */,
+				04BF14DD20BB08E0006B4E97 /* Cifar10.mlmodel in Sources */,
 				043FA68220B96F2A0022B836 /* ObjectDetectionView.swift in Sources */,
+				043FA69C20B993830022B836 /* ClassificationResult.swift in Sources */,
+				043FA6A420B999390022B836 /* UseCasesAssembly.swift in Sources */,
 				043FA68020B96F000022B836 /* ObjectDetectionViewController.swift in Sources */,
+				043FA6A020B997D00022B836 /* ClassifyDataUseCase.swift in Sources */,
 				043FA68420B96F810022B836 /* ObjectDetectionPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -515,7 +563,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 663EN2VY39;
+				DEVELOPMENT_TEAM = 8577REZ3AR;
 				INFOPLIST_FILE = "$(SRCROOT)/ObjectRecognizer/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -534,7 +582,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 663EN2VY39;
+				DEVELOPMENT_TEAM = 8577REZ3AR;
 				INFOPLIST_FILE = "$(SRCROOT)/ObjectRecognizer/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

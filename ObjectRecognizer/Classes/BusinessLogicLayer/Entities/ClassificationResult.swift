@@ -1,5 +1,5 @@
 //
-//  ClassificationData.swift
+//  ClassificationResult.swift
 //  ObjectRecognizer
 //
 //  Created by vladislav klimenko on 26/05/2018.
@@ -7,9 +7,8 @@
 //
 
 import Foundation
-import CoreImage
 
-struct ClassificationData {
-    var orientation: CGImagePropertyOrientation
-    var image: CIImage
+struct ClassificationResult {
+    let identifier: String
+    let confidence: Float
 }
