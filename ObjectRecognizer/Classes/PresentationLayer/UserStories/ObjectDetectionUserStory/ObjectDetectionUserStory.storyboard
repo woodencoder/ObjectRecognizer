@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xyP-ry-JXL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xyP-ry-JXL">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -17,13 +17,60 @@
                     <view key="view" contentMode="scaleToFill" id="5qd-G4-o6T">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please, select a picture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LY8-2v-WfI">
+                                <rect key="frame" x="99" y="323" width="177" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44D-Dv-sFJ">
+                                <rect key="frame" x="160.5" y="404" width="54" height="30"/>
+                                <state key="normal" title="Camera">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressOpenCamera:" destination="xyP-ry-JXL" eventType="touchUpInside" id="bt0-hg-E4d"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="48M-1F-0XA">
+                                <rect key="frame" x="163.5" y="454" width="48" height="30"/>
+                                <state key="normal" title="Library">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressOpenLibrary:" destination="xyP-ry-JXL" eventType="touchUpInside" id="rb5-ra-OHQ"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aEP-HE-eOl">
+                                <rect key="frame" x="67.5" y="33" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="A3G-5L-Hgw"/>
+                                    <constraint firstAttribute="width" constant="240" id="Kli-8t-oqA"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.25490196079999999" green="0.84705882349999995" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="LY8-2v-WfI" firstAttribute="centerY" secondItem="5qd-G4-o6T" secondAttribute="centerY" id="1Mv-rE-L00"/>
+                            <constraint firstItem="aEP-HE-eOl" firstAttribute="centerX" secondItem="5qd-G4-o6T" secondAttribute="centerX" id="EDh-Ig-yLa"/>
+                            <constraint firstItem="48M-1F-0XA" firstAttribute="top" secondItem="44D-Dv-sFJ" secondAttribute="bottom" constant="20" id="Iim-xO-z4L"/>
+                            <constraint firstItem="48M-1F-0XA" firstAttribute="centerX" secondItem="5qd-G4-o6T" secondAttribute="centerX" id="Kfw-91-NNW"/>
+                            <constraint firstItem="LY8-2v-WfI" firstAttribute="centerX" secondItem="5qd-G4-o6T" secondAttribute="centerX" id="bDD-I7-RV3"/>
+                            <constraint firstItem="LY8-2v-WfI" firstAttribute="top" secondItem="aEP-HE-eOl" secondAttribute="bottom" constant="50" id="czv-C7-V8C"/>
+                            <constraint firstItem="44D-Dv-sFJ" firstAttribute="centerX" secondItem="5qd-G4-o6T" secondAttribute="centerX" id="j8L-NE-N4h"/>
+                            <constraint firstItem="44D-Dv-sFJ" firstAttribute="top" secondItem="LY8-2v-WfI" secondAttribute="bottom" constant="60" id="uU6-PH-3as"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="V3V-Sf-j9N"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="aEP-HE-eOl" id="LUK-L3-QcG"/>
+                        <outlet property="predictionLabel" destination="LY8-2v-WfI" id="hYk-Kg-aJr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lwy-LK-mT5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-223" y="50"/>
+            <point key="canvasLocation" x="-223.19999999999999" y="49.925037481259373"/>
         </scene>
     </scenes>
 </document>

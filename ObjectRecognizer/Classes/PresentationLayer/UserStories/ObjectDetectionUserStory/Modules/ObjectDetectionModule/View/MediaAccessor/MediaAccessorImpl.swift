@@ -21,7 +21,8 @@ final class MediaAccessorImpl: NSObject, MediaAccessor {
         let imagePicker  = UIImagePickerController()
         imagePicker.sourceType = .camera
         imagePicker.delegate = self
-
+        imagePicker.allowsEditing = true
+        
         viewController.present(imagePicker, animated: true)
     }
     
@@ -29,6 +30,7 @@ final class MediaAccessorImpl: NSObject, MediaAccessor {
         let imagePicker  = UIImagePickerController()
         imagePicker.sourceType = .photoLibrary
         imagePicker.delegate = self
+        imagePicker.allowsEditing = true
         
         viewController.present(imagePicker, animated: true)
     }
@@ -39,12 +41,14 @@ extension MediaAccessorImpl: UIImagePickerControllerDelegate, UINavigationContro
     
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [String : Any]) {
+        picker.dismiss(animated: true)
         guard
             let image = info[UIImagePickerControllerEditedImage] as? UIImage,
-            let ciImage = image.ciImage else {
+            let ciImage = CIImage(image: image) else {
             return
         }
-        let data = ClassificationData(image: ciImage)
+        let data = ClassificationData(orientation: CGImagePropertyOrientation(image.imageOrientation),
+                                      image: ciImage)
         delegate?.mediaAccessor(self, didFinishPickingData: data)
     }
     

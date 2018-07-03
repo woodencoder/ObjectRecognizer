@@ -11,6 +11,8 @@ import EasyDi
 
 class ObjectDetectionModuleAssembly: Assembly {
     
+    lazy var useCasesAssembly: UseCasesAssembly = self.context.assembly()
+    
     var view: ObjectDetectionView {
         return definePlaceholder()
     }
@@ -19,7 +21,8 @@ class ObjectDetectionModuleAssembly: Assembly {
         return define(
             scope: .prototype,
             init: ObjectDetectionPresenterImpl(
-                        view: self.view)
+                view: self.view,
+                classifyDataUseCase: self.useCasesAssembly.classifyDataUseCase)
         )
     }
     

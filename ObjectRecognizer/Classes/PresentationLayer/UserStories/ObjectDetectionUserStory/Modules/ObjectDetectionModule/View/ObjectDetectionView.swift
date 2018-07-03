@@ -9,5 +9,5 @@
 import Foundation
 
 protocol ObjectDetectionView: class {
-    
+    func update(with classificationResult: ClassificationResult)
 }

@@ -15,6 +15,9 @@ class ObjectDetectionViewController: UIViewController {
     var presenter: ObjectDetectionPresenter!
     var mediaAccessor: MediaAccessor!
     
+    @IBOutlet weak var predictionLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         ObjectDetectionModuleAssembly.instance().inject(into: self)
@@ -39,11 +42,16 @@ class ObjectDetectionViewController: UIViewController {
 
 extension ObjectDetectionViewController: ObjectDetectionView {
     
+    func update(with classificationResult: ClassificationResult) {
+        predictionLabel.text = "Predict \(classificationResult.identifier) with \(classificationResult.confidence) confidence"
+    }
+    
 }
 
 extension ObjectDetectionViewController: MediaAccessorDelegate {
     
     func mediaAccessor(_ mediaAccessor: MediaAccessor, didFinishPickingData data: ClassificationData) {
+        imageView.image = UIImage(ciImage: data.image)
         presenter.didObtainClassificationData(data)
     }
     
